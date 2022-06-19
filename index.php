@@ -10,7 +10,15 @@ metodi d’istanza che abbiamo visto stamattina e create un file index.php in cu
 La classe può essere definita internamente al file index.php o essere inclusa (soluzione preferibile)
 */
 
-require_once __DIR__ . "/class/movies.php"
+require_once __DIR__ . "/class/movies.php";
+$joker = new Movie('Joker', 'Drama', 2019);
+$VforVendetta = new Movie('V for Vendetta', 'Action/Drama', 2005);
+$tenet = new Movie('Tenet', 'Action', 2020);
+$meetTheParents = new Movie('Meet the Parents', 'Comic', 2019);
+
+$movies = array($joker, $VforVendetta, $tenet, $meetTheParents);
+
+var_dump($movies)
 
 ?>
 
@@ -24,11 +32,18 @@ require_once __DIR__ . "/class/movies.php"
   <title>PHP-OPP-1</title>
 </head>
 <body>
-  <h3>Nome del Film</h3>
-  <ul>
-    <li>Nome</li>
-    <li>Genere</li>
-    <li>Data di uscita</li>
-  </ul>
+  <h1>Movies</h1>
+  <?php foreach($movies as $movie): ?>
+    <div>
+      <ul>
+        <li><h2>Title:</h2><?php echo $movie->getTitle() ?></li>
+        <li><h2>Genre:</h2><?php echo $movie->getGenre() ?></li>
+        <li><h2>Release Date:</h2><?php echo $movie->getReleaseDate() ?></li>
+      </ul>
+      <hr>
+    </div>
+
+  <?php endforeach ?>
+
 </body>
 </html>

@@ -7,25 +7,27 @@ class Movie {
   function __construct($_title, $_genre, $_releaseDate){
     $this->title = $_title;
     $this->genre = $_genre;
-    $this->relaseDate = $_relaseDate;
+    $this->releaseDate = $_releaseDate;
+
+    $this->setReleaseDate();
   }
 
   // GETTER NB. 'return' !!!
   public function getTitle(){
-    return $this->title = $_title;
+    return $this->title;
   }
   
   public function getGenre(){
-    return $this->genre = $_genre;
+    return $this->genre;
   }  
 
-  public function getRelaseDate(){
-    return $this->relaseDate = $_relaseDate;
+  public function getReleaseDate(){
+    return $this->releaseDate;
   }
 
   // SETTER
-  public function setRelaseDate(){
-    if($this->relaseDate >= 2018){
+  public function setReleaseDate(){
+    if($this->releaseDate >= 2018){
       $releaseDate = 'latest releases';
     } else {
       $releaseDate = 'oldies';
@@ -33,8 +35,5 @@ class Movie {
   }
 
 }
-$joker = new Movie('Joker', 'Drama', 2019);
-$VforVendetta = new Movie('V for Vendetta', 'Action/Drama', 2005);
-$tenet = new Movie('Tenet', 'Action', 2020);
-$meetTheParents = new Movie('Meet the Parents', 'Comic', 2019);
+
 ?>
