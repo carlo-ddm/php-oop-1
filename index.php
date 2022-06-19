@@ -18,7 +18,7 @@ $meetTheParents = new Movie('Meet the Parents', 'Comic', 2019);
 
 $movies = array($joker, $VforVendetta, $tenet, $meetTheParents);
 
-var_dump($movies)
+// var_dump($movies)
 
 ?>
 
