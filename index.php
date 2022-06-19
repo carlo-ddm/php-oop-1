@@ -36,9 +36,9 @@ $movies = array($joker, $VforVendetta, $tenet, $meetTheParents);
   <?php foreach($movies as $movie): ?>
     <div>
       <ul>
-        <li><h2>Title:</h2><?php echo $movie->getTitle() ?></li>
-        <li><h2>Genre:</h2><?php echo $movie->getGenre() ?></li>
-        <li><h2>Release:</h2><?php echo $movie->getReleaseDate() ?></li>
+        <li><strong>Title:</strong><?php echo $movie->getTitle() ?></li>
+        <li><strong>Genre:</strong><?php echo $movie->getGenre() ?></li>
+        <li><strong>Release:</strong><?php echo $movie->getReleaseDate() ?></li>
       </ul>
       <hr>
     </div>
