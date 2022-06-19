@@ -28,12 +28,10 @@ class Movie {
   // SETTER
   public function setReleaseDate(){
     if($this->releaseDate >= 2018){
-      $releaseDate = 'latest releases';
+      $this->releaseDate = 'latest releases';
     } else {
-      $releaseDate = 'oldies';
+      $this->releaseDate = 'oldies';
     }
   }
-
 }
-
 ?>

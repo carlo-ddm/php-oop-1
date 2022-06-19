@@ -38,7 +38,7 @@ var_dump($movies)
       <ul>
         <li><h2>Title:</h2><?php echo $movie->getTitle() ?></li>
         <li><h2>Genre:</h2><?php echo $movie->getGenre() ?></li>
-        <li><h2>Release Date:</h2><?php echo $movie->getReleaseDate() ?></li>
+        <li><h2>Release:</h2><?php echo $movie->getReleaseDate() ?></li>
       </ul>
       <hr>
     </div>
